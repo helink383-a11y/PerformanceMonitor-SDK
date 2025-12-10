@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_test_lag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击模拟主线程卡顿 (Thread.sleep)" />
+        
+    <Button
+        android:id="@+id/btn_test_anr_signal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送 SIGQUIT 信号 (测试 Native 监控)"
+        android:backgroundTint="#FF5722"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="监控日志："
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="等待数据..."
+            android:textSize="14sp" />
+    </ScrollView>
+
+</LinearLayout>
